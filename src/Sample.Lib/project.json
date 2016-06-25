@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "debugType": "portable"
+  },
+  "dependencies": {},
+  "frameworks": {
+    "net4.5.2": { },
+    "net40": {},
+    "net45": {},
+    "netstandard1.6": {
+      "dependencies": {
+        "NETStandard.Library": "1.6.0"
+      }
+    }
+  }
+}

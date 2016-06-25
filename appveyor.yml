@@ -1,0 +1,18 @@
+version: '{build}'
+image: Visual Studio 2015
+configuration: Release
+install:
+- ps: ./Install.ps1
+build_script:
+- ps: ./Build.ps1
+test: off
+artifacts:
+- path: artifacts/Serilog.*.nupkg
+deploy:
+- provider: NuGet
+  api_key:
+    secure: nvZ/z+pMS91b3kG4DgfES5AcmwwGoBYQxr9kp4XiJHj25SAlgdIxFx++1N0lFH2x
+  skip_symbols: true
+  on:
+    branch: /^(dev|master)$/
+
