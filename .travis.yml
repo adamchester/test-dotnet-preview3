@@ -24,11 +24,6 @@ os:
 env:
   matrix:
     - CLI_VERSION=1.0.0-preview3-003161
-    - CLI_VERSION=Latest
-
-matrix:
-  allow_failures:
-    - env: CLI_VERSION=Latest
 
 before_install:
   - if test "$TRAVIS_OS_NAME" == "osx"; then brew update; brew install openssl; brew link --force openssl; fi
